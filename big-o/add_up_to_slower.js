@@ -1,3 +1,5 @@
+// O(n)
+
 function addUpTo(n){
     let total = 0;
 
