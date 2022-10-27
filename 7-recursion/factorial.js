@@ -12,7 +12,6 @@ const factorial = (num) => {
 console.log(factorial(10));
 
 // Recursive solution
-
 const factorialRe = (num) => {
   if (num === 1) {
     return 1;
