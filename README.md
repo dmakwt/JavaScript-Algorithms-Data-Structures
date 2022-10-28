@@ -1,6 +1,5 @@
 # JavaScript Algorithms and Data Structures (Review)
 
+- Big O Notation
 
-* Big O Notation
-
-![alt text](https://github.com/dmakwt/JavaScript-Algorithms-Data-Structures/blob/main/big-o/images/graph.png)
+![alt text](https://github.com/dmakwt/JavaScript-Algorithms-Data-Structures/blob/main/2-big-o/images/graph.png)
