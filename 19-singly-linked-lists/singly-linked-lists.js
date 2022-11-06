@@ -114,4 +114,5 @@ element.push('test1');
 element.push('test3');
 element.unshift('test4');
 element.shift();
+element.set(0, 'Dhari');
 console.log(element.get(0));
