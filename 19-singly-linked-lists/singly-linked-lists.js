@@ -105,6 +105,30 @@ class SinglyLinkedList {
     }
     return false;
   }
+
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+
+    if (index === index.length) {
+      this.push(val);
+      return true;
+      // or !!this.push(val)
+    }
+    if (index === 0) {
+      this.unshift(val);
+      return true;
+      // or !!this.unshift(val);
+    }
+
+    let newNode = new Node(val);
+    let prev = this.get(index - 1);
+    let temp = prev.next;
+    prev.next = newNode;
+    newNode.next = temp;
+
+    this.length++;
+    return true;
+  }
 }
 
 let element = new SinglyLinkedList();
@@ -115,4 +139,5 @@ element.push('test3');
 element.unshift('test4');
 element.shift();
 element.set(0, 'Dhari');
-console.log(element.get(0));
+element.insert(1, 'Wow');
+console.log(element.get(1));
