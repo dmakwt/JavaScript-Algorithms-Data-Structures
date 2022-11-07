@@ -127,7 +127,22 @@ class SinglyLinkedList {
     newNode.next = temp;
 
     this.length++;
+
     return true;
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    let previousNode = this.get(index - 1);
+    let removed = previousNode.next;
+    previousNode.next = removed.next;
+
+    this.length--;
+
+    return removed;
   }
 }
 
@@ -139,5 +154,6 @@ element.push('test3');
 element.unshift('test4');
 element.shift();
 element.set(0, 'Dhari');
-element.insert(1, 'Wow');
-console.log(element.get(1));
+element.insert(2, 'Wow');
+element.remove(2);
+console.log(element.get(2));
